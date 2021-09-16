@@ -1,0 +1,83 @@
+// Import initial  Bulmavariables
+@import "../node_modules/bulma/sass/utilities/initial-variables"
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap')
+
+$family-pixel: 'VT323', monospace
+
+$primary: #4e1290
+
+.is-pixel 
+    font-family: $family-pixel
+
+body
+    color: #fff
+    font-family: 'DM Sans', Helvetica, sans-serif
+
+.hero 
+    background: linear-gradient(200deg, rgb(165, 70, 121) 0%, rgb(117, 64, 171) 100%) repeat scroll 0% 0% / cover
+
+    .title, .subtitle
+        font-size: 2.5em
+
+    h3
+        font-size: 36px
+
+    h1,h2,h3,h4,h5,h6, .title, .subtitle
+        font-family: $family-pixel
+        color: #fff
+        text-shadow: 0 2px 0 #000
+
+    .navbar 
+        min-height: 5rem
+
+    .navbar-brand
+
+        a.navbar-item:hover
+            background-color: transparent
+
+        img
+            max-height: 3.75rem
+            margin-right: 10px
+    
+    .notice
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 10vh
+
+        .social-links
+            display: flex
+            justify-content: space-around
+            width: 200px
+
+            a i
+                color: #fff
+                font-size: 2.5em
+
+    .spinning-wrapper
+
+        img.spinning
+            position: fixed
+            animation-name: spin
+            animation-duration: 60000ms
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+            right: 26vw
+
+    
+    @keyframes spin 
+        0%
+            transform: rotate(0deg)
+        100% 
+            transform: rotate(360deg)
+        
+
+
+
+
+    
+    
+// Import the rest of Bulma
+@import "../node_modules/bulma/bulma"
